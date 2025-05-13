@@ -1,0 +1,137 @@
+﻿@page
+@model AnnaPortifolio.Pages.Home.IndexModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Bem-vindo(a)";
+}
+
+<script src="~/js/Index.js"></script>
+
+<section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="~/images/annaImagem.png" alt="Foto Ludica de Anna Carollyne, desenvolvedora back-end" class="img-fluid rounded-circle shadow" style="max-width: 250px;">
+        </div>
+
+        <div class="col-md-8 text-white">
+            <h2>Olá, eu sou Anna Carollyne 👋</h2>
+            <p class="lead">
+                Desenvolvedora Back-End com 4 anos de experiência, especialista em C#, ASP.NET, SQL Server e com conhecimento em front-end com HTML, CSS e JavaScript. Atualmente trabalho com soluções robustas para empresas na área financeira.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mb-4">
+                <img src="~/icons/csharp.png" alt="C#" title="C#" class="tech-icon">
+                <img src="~/icons/aspnet.png" alt="ASP.NET" title="ASP.NET" class="tech-icon">
+                <img src="~/icons/html5.png" alt="HTML5" title="HTML5" class="tech-icon">
+                <img src="~/icons/javascript.png" alt="JavaScript" title="JavaScript" class="tech-icon">
+                <img src="~/icons/sqlserver.png" alt="SQL Server" title="SQL Server" class="tech-icon">
+                <img src="~/icons/docker.png" alt="Docker" title="Docker" class="tech-icon">
+                <img src="~/icons/azure.png" alt="Azure" title="Azure" class="tech-icon">
+                <img src="~/icons/swagger.png" alt="Swagger" title="Swagger" class="tech-icon">
+                <img src="~/icons/icons8-bootstrap-48.png" alt="Bootstrap" title="Bootstrap" class="tech-icon">
+            </div>
+
+            <a class="btn btn-outline-light" href="~/arquivos/curriculoAnna2025.pdf" download>
+                <i class="bi bi-download me-2"></i>Baixar Currículo
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5 projetos-section">
+    <h3 class="text-center">Projetos</h3>
+
+    <div id="carouselProjetos" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Projeto 1 -->
+            <div class="carousel-item active text-center">
+                <img src="~/images/fut.jpg" class="d-block mx-auto" alt="Projeto em construção" style="max-height: 300px;">
+                <div class="mt-4">
+                    <h5>Projeto Futebol</h5>
+                    <p>Uma API que busca dados em tempo real sobre partidas a partir de uma API externa.</p>
+                    <p><strong>Tecnologias:</strong> ASP.NET Core 8.0, C#, SQL Server, APIs RESTful, Entity Framework Core, Migrations, Unit of Work, Repositórios Genéricos, Arquitetura DDD</p>
+                    <a href="https://github.com/MoshGirl/ProjetoFutebol" class="btn btn-primary" target="_blank">Ver README</a>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="carousel-item text-center">
+                <img src="~/images/caneca.jpg" class="d-block mx-auto" alt="Projeto em construção" style="max-height: 300px;">
+                <div class="mt-4">
+                    <h5>Rammaby Store</h5>
+                    <p>E-Commerce baseado na venda de canecas e outros produtos personalizáveis.</p>
+                    <p><strong>Tecnologias:</strong> ASP.NET Core, Entity Framework, JavaScript, SQL Server</p>
+                    <a href="https://github.com/seuusuario/rammaby-store" class="btn btn-primary" target="_blank">Ver README</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjetos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjetos" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+<section class="container my-5" id="sobre">
+    <h3 class="text-center mb-4">Sobre Mim</h3>
+
+    <div class="text-end mb-3">
+        <button class="btn btn-outline-light" onclick="alternarIdioma()">English</button>
+    </div>
+
+    <div id="texto-pt">
+        <p>Olá! Sou uma desenvolvedora com foco em back-end e experiência sólida na criação e manutenção de aplicações web full-stack. Especializo-me em construir soluções confiáveis, escaláveis e bem estruturadas para atender às necessidades complexas de negócios.</p>
+
+        <p>
+            <strong>🔧 Stack Tecnológica:</strong><br>
+            <strong>Back-End:</strong> ASP.NET Core, C#, Entity Framework, SQL Server<br>
+            <strong>Front-End:</strong> JavaScript, jQuery, HTML5, CSS, Bootstrap<br>
+            <strong>APIs:</strong> Design e implementação de APIs RESTful<br>
+            <strong>Banco de Dados:</strong> Modelagem, otimização de queries e procedures
+        </p>
+
+        <p>💡 Já trabalhei em sistemas onde desempenho, segurança e integridade dos dados são cruciais — especialmente em plataformas financeiras. Atuo tanto no desenvolvimento de novas funcionalidades quanto na manutenção de código legado, sempre com base limpa e organizada.</p>
+
+        <p>🧠 Sigo boas práticas como princípios SOLID, arquitetura em camadas e foco em código sustentável e escalável. Sou detalhista, proativa e comprometida em entregar valor real ao seu projeto.</p>
+
+        <p>Se você busca alguém capaz de traduzir regras de negócio complexas em código robusto, vamos trabalhar juntos!</p>
+    </div>
+
+    <div id="texto-en" style="display: none;">
+        <p>Hi! I’m a back-end-focused developer with strong experience in creating and maintaining full-stack web applications. I specialize in building reliable, scalable, and well-structured solutions for complex business needs.</p>
+
+        <p>
+            <strong>🔧 Tech Stack Highlights:</strong><br>
+            <strong>Back-End:</strong> ASP.NET Core, C#, Entity Framework, SQL Server<br>
+            <strong>Front-End:</strong> JavaScript, jQuery, HTML5, CSS, Bootstrap<br>
+            <strong>APIs:</strong> RESTful API design and implementation<br>
+            <strong>Database:</strong> Database modeling, query optimization, and stored procedures
+        </p>
+
+        <p>💡 I’ve worked on systems where performance, security, and data integrity are critical — especially in finance-related platforms. I can handle both new feature development and legacy code maintenance, always with a clean, organized codebase.</p>
+
+        <p>🧠 I follow best practices like SOLID principles, layered architecture, and write code that is maintainable and easy to scale. I'm detail-oriented, proactive, and committed to delivering real value to your project.</p>
+
+        <p>If you're looking for someone who can translate complex business logic into robust code, let’s work together!</p>
+    </div>
+</section>
+
+<section id="contatos" class="container my-5">
+    <h3 class="text-center mb-4 text-white">Contatos</h3>
+    <div class="d-flex justify-content-center gap-5 flex-wrap">
+        <a href="https://www.linkedin.com/in/anna-carollyne-pereira-da-silva-a020a0154/" target="_blank" class="contact-link">
+            <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:anna11bra@gmail.com" class="contact-link">
+            <i class="bi bi-envelope-fill"></i> Email
+        </a>
+        <a href="https://github.com/MoshGirl" target="_blank" class="contact-link">
+            <i class="bi bi-github"></i> GitHub
+        </a>
+    </div>
+</section>

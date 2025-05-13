@@ -1,0 +1,205 @@
+﻿:root {
+    --primary: #283B08; /* Verde Musgo */
+    --primary-light: #6B8E23; /* Verde Oliva Claro */
+    --light: #F8F9FA; /* Branco Gelo */
+    --dark: #212529; /* Preto Fosco */
+    --gray-dark: #343A40; /* Cinza Escuro */
+}
+
+.navbar {
+    background-color: var(--gray-dark);
+}
+
+    .navbar .navbar-brand {
+        color: var(--light);
+        font-weight: bold;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        color: var(--light);
+    }
+
+        .navbar .navbar-nav .nav-link:hover,
+        .navbar .navbar-nav .nav-link.active {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'Arial', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+    .btn-primary:hover {
+        background-color: var(--primary-light);
+        border-color: var(--primary-light);
+    }
+
+a {
+    color: var(--light);
+}
+
+    a:hover {
+        color: var(--primary-light);
+        text-decoration: underline;
+    }
+
+footer {
+    background-color: var(--gray-dark);
+    color: var(--light);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.tech-icon {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+    .tech-icon:hover {
+        transform: scale(1.15);
+    }
+
+#sobre {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+    #sobre h3 {
+        color: var(--light);
+        margin-bottom: 2rem;
+    }
+
+    #sobre p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    #sobre .btn {
+        border-color: var(--primary-light);
+        color: var(--primary-light);
+        transition: all 0.3s ease-in-out;
+    }
+
+        #sobre .btn:hover {
+            background-color: var(--primary-light);
+            color: var(--dark);
+            border-color: var(--primary-light);
+        }
+
+#contatos {
+    background-color: var(--gray-dark);
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    color: var(--light);
+}
+
+.contact-link {
+    color: var(--light);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .contact-link i {
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+        vertical-align: middle;
+    }
+
+    .contact-link:hover {
+        color: var(--primary-light);
+    }
+
+/*.projetos-section {
+    background-color: var(--light);*/ /* branco gelo */
+    /*border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .projetos-section h3 {
+        margin-bottom: 30px;
+        color: var(--primary);
+    }*/
+
+.projetos-section {
+    background-color: var(--light);
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .projetos-section h3 {
+        margin-bottom: 30px;
+        color: var(--primary);
+    }
+
+.carousel-inner {
+    padding: 20px;
+}
+
+.carousel-item img {
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-item h5 {
+    color: var(--primary);
+    margin-top: 15px;
+}
+
+.carousel-item p {
+    color: var(--gray-dark);
+    font-size: 1.1rem;
+}
+
+.carousel-item .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+    .carousel-item .btn-primary:hover {
+        background-color: var(--primary-light);
+        border-color: var(--primary-light);
+    }
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+.card-title {
+    color: var(--dark) !important;
+}
+
+.card-text {
+    color: var(--gray-dark);
+}
