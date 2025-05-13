@@ -19,22 +19,22 @@ Criar uma aplicação web moderna e responsiva para expor:
 
 ## 🗂️ Estrutura do Projeto
 
-📁 wwwroot/
-├── 📁 assets/
-│ ├── 📁 files/ # Arquivos como currículos
-│ ├── 📁 icons/ # Ícones usados no site
-│ └── 📁 images/ # Imagens e screenshots
-├── 📁 css/ # Estilos personalizados
-├── 📁 js/ # Scripts JavaScript
-└── 📁 lib/ # Bibliotecas externas (ex: Bootstrap, jQuery)
+- 📁 wwwroot/
+- ├── 📁 assets/
+- │ ├── 📁 files/ # Arquivos como currículos
+- │ ├── 📁 icons/ # Ícones usados no site
+- │ └── 📁 images/ # Imagens e screenshots
+- ├── 📁 css/ # Estilos personalizados
+- ├── 📁 js/ # Scripts JavaScript
+- └── 📁 lib/ # Bibliotecas externas (ex: Bootstrap, jQuery)
 
-📁 Pages/
-├── 📁 Home/
-│ └── Index.cshtml # Página principal
-└── 📁 Shared/
-├── _Header.cshtml
-├── _Footer.cshtml
-└── _Layout.cshtml # Layout geral
+- 📁 Pages/
+- ├── 📁 Home/
+- │ └── Index.cshtml # Página principal
+- └── 📁 Shared/
+- ├── _Header.cshtml
+- ├── _Footer.cshtml
+- └── _Layout.cshtml # Layout geral
 
 ## 🔍 Funcionalidades
 
