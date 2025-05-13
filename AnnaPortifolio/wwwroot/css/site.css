@@ -1,12 +1,13 @@
-﻿/* === Definições de Tema === */
-:root {
+﻿:root {
     --primary: #8E1616;
     --primary-light: #E8C999;
     /* Tema Claro (padrão) */
     --bg: #F8EEDF;
     --text: #000000;
+    --text-dark-espace: #F8EEDF;
+    --card-text: var(--text);
     --navbar-bg: var(--primary-light);
-    --navbar-text: #000000;
+    --navbar-text: var(--text);
     --btn-bg: var(--primary);
     --btn-border: var(--primary);
     --btn-hover-bg: var(--primary-light);
@@ -14,8 +15,8 @@
     --link: var(--text);
     --link-hover: var(--primary-light);
     --card-bg: #ffffff;
-    --card-text: #000000;
     --carousel-icon: #000000;
+    --contatos-bg: var(--primary-light);
 }
 
 body.dark-theme {
@@ -32,12 +33,26 @@ body.dark-theme {
     --card-bg: #1a1a1a;
     --card-text: #F8EEDF;
     --carousel-icon: #F8EEDF;
+    --contatos-bg: #1f1f1f;
 }
 
 body {
     background-color: var(--bg);
     color: var(--text);
     font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    color: var(--text);
+}
+
+p{
+    color: var(--text);
+}
+
+.btn-outline-light {
+    border-color: var(--text);
+    color: var(--text);
 }
 
 .navbar {
@@ -108,7 +123,7 @@ footer {
 
     #sobre h3,
     #sobre p {
-        color: var(--link);
+        color: var(--text-dark-espace);
     }
 
     #sobre .btn {
@@ -124,7 +139,7 @@ footer {
         }
 
 #contatos {
-    background-color: var(--primary-light);
+    background-color: var(--contatos-bg);
     padding: 3rem 2rem;
     border-radius: 1rem;
     color: var(--text);
@@ -153,7 +168,7 @@ footer {
     }
 
 .projetos-section {
-    background-color: var(--primary-light);
+    background-color: var(--contatos-bg);
     border-radius: 20px;
     padding: 40px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
