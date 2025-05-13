@@ -20,10 +20,18 @@
                     <a class="nav-link @(currentPage == "/projetos" ? "active" : "")" asp-page="/Projetos">Projetos</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link @(currentPage == "/habilidades" ? "active" : "")" asp-page="/Habilidades">Habilidades Tecnicas</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link @(currentPage == "/sobre" ? "active" : "")" asp-page="/Sobre">Sobre</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link @(currentPage == "/contato" ? "active" : "")" asp-page="/Contato">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <button onclick="toggleTheme()" class="btn btn-primary">
+                        Alternar Tema
+                    </button>
                 </li>
             </ul>
         </div>

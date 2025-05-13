@@ -1,55 +1,84 @@
-﻿:root {
+﻿/* === Definições de Tema === */
+:root {
     --primary: #8E1616;
     --primary-light: #E8C999;
-    --light: #F8EEDF;
-    --dark: #000000;
+    /* Tema Claro (padrão) */
+    --bg: #F8EEDF;
+    --text: #000000;
+    --navbar-bg: var(--primary-light);
+    --navbar-text: #000000;
+    --btn-bg: var(--primary);
+    --btn-border: var(--primary);
+    --btn-hover-bg: var(--primary-light);
+    --btn-hover-border: var(--primary-light);
+    --link: var(--text);
+    --link-hover: var(--primary-light);
+    --card-bg: #ffffff;
+    --card-text: #000000;
+    --carousel-icon: #000000;
+}
+
+body.dark-theme {
+    --bg: #000000;
+    --text: #F8EEDF;
+    --navbar-bg: #1f1f1f;
+    --navbar-text: #F8EEDF;
+    --btn-bg: #8E1616;
+    --btn-border: #8E1616;
+    --btn-hover-bg: #E8C999;
+    --btn-hover-border: #E8C999;
+    --link: #F8EEDF;
+    --link-hover: #E8C999;
+    --card-bg: #1a1a1a;
+    --card-text: #F8EEDF;
+    --carousel-icon: #F8EEDF;
 }
 
 body {
-    background-color: var(--dark);
-    color: var(--light);
+    background-color: var(--bg);
+    color: var(--text);
     font-family: 'Arial', sans-serif;
 }
 
-a, .navbar .navbar-nav .nav-link {
-    color: var(--light);
-    transition: color 0.3s ease;
-}
-
-    a:hover,
-    .navbar .navbar-nav .nav-link:hover,
-    .navbar .navbar-nav .nav-link.active {
-        color: var(--primary-light);
-        text-decoration: underline;
-    }
-
 .navbar {
-    background-color: var(--primary-light);
+    background-color: var(--navbar-bg);
 }
 
-    .navbar .navbar-brand {
-        color: var(--dark);
+    .navbar .navbar-brand,
+    .navbar .navbar-nav .nav-link {
+        color: var(--navbar-text);
         font-weight: bold;
     }
 
-    .navbar .navbar-nav .nav-link {
-        color: var(--dark);
+        .navbar .navbar-nav .nav-link:hover,
+        .navbar .navbar-nav .nav-link.active {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+a {
+    color: var(--link);
+}
+
+    a:hover {
+        color: var(--link-hover);
+        text-decoration: underline;
     }
 
 .btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-    transition: all 0.3s ease;
+    background-color: var(--btn-bg);
+    border-color: var(--btn-border);
 }
 
     .btn-primary:hover {
-        background-color: var(--primary-light);
-        border-color: var(--primary-light);
+        background-color: var(--btn-hover-bg);
+        border-color: var(--btn-hover-border);
+        color: var(--text);
     }
 
 footer {
-    background-color: var(--dark);
-    color: var(--light);
+    background-color: var(--bg);
+    color: var(--text);
     text-align: center;
     padding: 20px 0;
 }
@@ -69,23 +98,17 @@ footer {
         transform: scale(1.15);
     }
 
-#sobre,
-#contatos,
-.projetos-section {
-    border-radius: 1rem;
-    padding: 3rem 2rem;
-}
-
 #sobre {
     background-color: var(--primary);
-    color: var(--light);
+    color: var(--link);
+    padding: 3rem 2rem;
+    border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
     #sobre h3,
     #sobre p {
-        margin-bottom: 2rem;
-        line-height: 1.6;
+        color: var(--link);
     }
 
     #sobre .btn {
@@ -96,29 +119,28 @@ footer {
 
         #sobre .btn:hover {
             background-color: var(--primary-light);
-            color: var(--dark);
+            color: var(--text);
+            border-color: var(--primary-light);
         }
 
 #contatos {
     background-color: var(--primary-light);
-    color: var(--dark);
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    color: var(--text);
 }
 
     #contatos h3 {
-        color: var(--dark) !important;
+        color: var(--text) !important;
         margin-bottom: 2rem;
     }
 
 .contact-link {
-    color: var(--dark);
+    color: var(--text);
     font-size: 1.2rem;
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
-    .contact-link:hover {
-        color: var(--primary);
-    }
 
     .contact-link i {
         margin-right: 0.5rem;
@@ -126,15 +148,17 @@ footer {
         vertical-align: middle;
     }
 
+    .contact-link:hover {
+        color: var(--primary);
+    }
+
 .projetos-section {
     background-color: var(--primary-light);
+    border-radius: 20px;
+    padding: 40px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: var(--dark);
+    color: var(--text);
 }
-
-    .projetos-section h3 {
-        margin-bottom: 30px;
-    }
 
 .carousel-inner {
     padding: 20px;
@@ -147,27 +171,6 @@ footer {
     transition: transform 0.3s ease;
 }
 
-.carousel-item:hover img {
-    transform: scale(1.05);
-}
-
-.carousel-item h5,
-.carousel-item p,
-.carousel-item .btn-primary {
-    color: var(--dark);
-}
-
-.carousel-item .btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-    .carousel-item .btn-primary:hover {
-        background-color: var(--primary-light);
-        border-color: var(--primary-light);
-    }
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-image: none;
@@ -175,7 +178,7 @@ footer {
 
     .carousel-control-prev-icon::after,
     .carousel-control-next-icon::after {
-        color: var(--dark);
+        color: var(--carousel-icon);
         font-size: 2rem;
         position: absolute;
         top: 50%;
@@ -191,10 +194,31 @@ footer {
         content: '›';
     }
 
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-item h5,
+.carousel-item p {
+    color: var(--text);
+}
+
+.carousel-item .btn-primary {
+    background-color: var(--btn-bg);
+    border-color: var(--btn-border);
+}
+
+    .carousel-item .btn-primary:hover {
+        background-color: var(--btn-hover-bg);
+        border-color: var(--btn-hover-border);
+    }
+
 .card {
+    background-color: var(--card-bg);
+    color: var(--card-text);
     border: none;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
@@ -204,5 +228,5 @@ footer {
 
 .card-title,
 .card-text {
-    color: var(--dark) !important;
+    color: var(--card-text);
 }
