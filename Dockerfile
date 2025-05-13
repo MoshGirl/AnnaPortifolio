@@ -3,12 +3,13 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copia o arquivo de projeto e restaura dependências
-COPY *.csproj ./
-RUN dotnet restore
+COPY AnnaPortifolio/*.csproj ./AnnaPortifolio/
+RUN dotnet restore AnnaPortifolio/AnnaPortifolio.csproj
 
 # Copia o restante dos arquivos e publica
 COPY . ./
-RUN dotnet publish -c Release -o out
+WORKDIR /app/AnnaPortifolio
+RUN dotnet publish -c Release -o /app/out
 
 # Etapa 2: runtime da aplicação
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
