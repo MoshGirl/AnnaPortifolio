@@ -7,9 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Contato\" />
-    <Folder Include="Pages\Projetos\" />
-    <Folder Include="Pages\Sobre\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
