@@ -2,7 +2,7 @@
     string currentPage = ViewContext.RouteData.Values["page"]?.ToString()?.ToLower();
 }
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar fixed-top navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" asp-page="/Index">Anna.Dev</a>
 
@@ -17,16 +17,16 @@
                     <a class="nav-link @(currentPage == "/index" ? "active" : "")" asp-page="/Index">Início</a>
                 </li>                
                 <li class="nav-item">
-                    <a class="nav-link @(currentPage == "/projetos" ? "active" : "")" asp-page="/Projetos">Projetos</a>
+                    <a class="nav-link" href="#projetos">Projetos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link @(currentPage == "/habilidades" ? "active" : "")" asp-page="/Habilidades">Habilidades Tecnicas</a>
+                    <a class="nav-link" href="#habilidades">Habilidades Técnicas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link @(currentPage == "/sobre" ? "active" : "")" asp-page="/Sobre">Sobre</a>
+                    <a class="nav-link" href="#sobre">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link @(currentPage == "/contato" ? "active" : "")" asp-page="/Contato">Contato</a>
+                    <a class="nav-link" href="#contatos">Contato</a>
                 </li>
                 <li class="nav-item">
                     <button onclick="toggleTheme()" class="btn btn-primary">

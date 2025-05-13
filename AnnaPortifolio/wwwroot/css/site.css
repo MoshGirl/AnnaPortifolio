@@ -36,6 +36,10 @@ body.dark-theme {
     --contatos-bg: #1f1f1f;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg);
     color: var(--text);
